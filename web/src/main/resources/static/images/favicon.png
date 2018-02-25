@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<link href="https://assets.gitee.com/assets/projects/application-15cd2c32c8bbe1f9e7b2f4020990e1ee.css" media="screen" rel="stylesheet" type="text/css" />
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='码云,代码托管,git,Git@OSC,gitee.com,开源,项目管理,版本控制,开源代码,代码分享,项目协作,开源项目托管,免费代码托管,Git代码托管,Git托管服务' name='Keywords'>
+<meta content='Spring Boot各种实战案例' name='Description'>
+<title>
+spring-boot-web/src/main/resources/static/images/favicon.png · 纯洁的微笑/spring-boot-examples - Gitee
+</title>
+<link href="https://assets.gitee.com/assets/favicon-950947d692935bf7e0b1629a69cd89ed.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<meta content='gitee.com/ityouknow/spring-boot-examples git https://gitee.com/ityouknow/spring-boot-examples.git' name='go-import'>
+<link href="https://assets.gitee.com/assets/application-4190737937d4860a7b0e3b91e5ee5d53.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="https://assets.gitee.com/assets/application-48350cd93341402f57dd4809daf433f1.js" type="text/javascript"></script>
+<script src="https://assets.gitee.com/assets/lib/jquery.timeago.en-7054cad705e8cd01115935aa73a944b9.js" type="text/javascript"></script>
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="wF+0BKxUzD4vYGPCMi2IVuxmgksrvN5yBc0N/aSjZ58=" name="csrf-token" />
+<script type="text/javascript">
+//<![CDATA[
+window.gon = {};gon.locale="en";gon.http_clone="https://gitee.com/ityouknow/spring-boot-examples.git";gon.user_project="ityouknow/spring-boot-examples";gon.manage_branch="Manage branch";gon.manage_tag="Manage tag";gon.enterprise_id=0;gon.ref="master";
+//]]>
+</script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
+<script>
+  var title = document.title.replace(/( - Gitee| - 码云)$/, ''),
+    imgUrl = '',
+    imgUrlEl = document.querySelector('meta[itemprop=image]')
+  if (imgUrlEl) {
+    imgUrl = imgUrlEl.getAttribute('content')
+  } else {
+    imgUrl = "https://gitee.com//logo_4wechat.png"
+  }
+  wx.config({
+    debug: false,
+    appId: "wxff219d611a159737",
+    timestamp: "1519560484",
+    nonceStr: "242361b4941aabe9a7a05b193891e56b",
+    signature: "78df906812b46a5da4b8de435ec1c878966be0e1",
+    jsApiList: [
+      'onMenuShareTimeline',
+      'onMenuShareAppMessage'
+    ]
+  });
+  wx.ready(function () {
+    wx.onMenuShareTimeline({
+      title: title, // 分享标题
+      link: "https://gitee.com/ityouknow/spring-boot-examples/blob/master/spring-boot-web/src/main/resources/static/images/favicon.png", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+      imgUrl: imgUrl // 分享图标
+    });
+    wx.onMenuShareAppMessage({
+      title: title, // 分享标题
+      link: "https://gitee.com/ityouknow/spring-boot-examples/blob/master/spring-boot-web/src/main/resources/static/images/favicon.png", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+      desc: document.querySelector('meta[name=Description]').getAttribute('content'),
+      imgUrl: imgUrl // 分享图标
+    });
+  });
+  wx.error(function(res){
+    console.error('err', res)
+  });
+</script>
+
+<script type='text/x-mathjax-config'>
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [["$$","$$"],["\\[","\\]"]],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    ignoreClass: "container|files",
+    processClass: "markdown-body"
+  }
+});
+</script>
+<script src="https://gitee.com/uploads/resources/MathJax-2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<!--[if lt IE 10]>
+<script>
+    window.location.href = "/incompatible.html";
+</script>
+<![endif]-->
+</head>
+
+<body class='git-project lang-en'>
+<script src="https://assets.gitee.com/assets/projects/app-b264d2c910970871bdab1058a9d88069.js" type="text/javascript"></script>
+<header class='common-header fixed noborder' id='git-header-nav'>
+<div class='ui container'>
+<div class='ui menu'>
+<div class='item gitosc-logo'>
+<a href="/"><img class='ui inline image' height='28' src='/logo_en.svg?20171024' width='95'>
+</a></div>
+<a href="/explore/recommend" class="item " title="Open Source">Open Source
+</a><a href="/gists" class="item " title="Gists">Gists
+</a><a href="/enterprises" class="item " title="Enterprise">Enterprise
+<sup class='ui red label'>
+特惠
+</sup>
+</a><div class='right menu userbar' id='git-nav-user-bar'>
+<div class='item'>
+<form accept-charset="UTF-8" action="/search" autocomplete="on" id="projects-search-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<div class='ui mini fluid input'>
+<input id="search_top-search-input" name="search" placeholder="Search projects and gists..." type="text" />
+<input id="group_id" name="group_id" type="hidden" />
+<input id="project_id" name="project_id" type="hidden" value="2660854" />
+<input id="type" name="type" type="hidden" />
+</div>
+</form>
+
+<script>
+  $('#projects-search').click(function(){
+     $('#projects-search-form').submit();
+  });
+  $('#projects-search-form').submit(function(){
+    query_name = $('#search_top-search-input').val();
+    search_type = $('#type').val();
+    var reg_exp = new RegExp('^\\*+$');
+    if (query_name != undefined && $.trim(query_name).length < 1) {
+      $('#search_top-search-input').focus();
+      Flash.show("Search keywords can not be less than one", 'error');
+      return false;
+    } else if (search_type == 'user' && reg_exp.test(query_name.replace(/\s/g, ''))) {
+      Flash.show('Invalid search content', 'error');
+      return false;
+    }
+  });
+  
+  // End
+</script>
+
+</div>
+<a href="/signup" class="item">Sign up
+</a><a href="/login" class="item">Sign in
+</a><script>
+  $('.destroy-user-session').click(function() {
+    $.cookie('access_token', null, { path: '/' });
+  })
+</script>
+
+</div>
+</div>
+</div>
+</header>
+<script>
+  (function() {
+    var updateNavbar;
+  
+    updateNavbar = function() {
+      if (window.scrollY > 5) {
+        return $('#git-header-nav').addClass('floating');
+      } else {
+        return $('#git-header-nav').removeClass('floating');
+      }
+    };
+  
+    updateNavbar();
+  
+    $(window).on('scroll', updateNavbar);
+  
+  }).call(this);
+</script>
+<script>
+  var emailStatus, commentStatus, gotopStatus;
+  
+  var c_start;
+  c_start = document.cookie.indexOf("remote_way=");
+  if (c_start == -1) {
+    setCookie('remote_way', "http", 360);
+  }
+  function setCookie(c_name, value, expiredays) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + expiredays);
+    document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires = " + exdate.toGMTString()) + ("; path = /");
+  }
+</script>
+
+<!--[if lt IE 10]>
+<script>
+  window.location.href = "/incompatible.html"
+</script>
+<![endif]-->
+
+<div class='fixed-notice-messages'>
+<div class='ui container'>
+<div class='flash-messages' id='messages-container'></div>
+</div>
+</div>
+<script>
+  (function() {
+    $(function() {
+      var $error_box, alertTip, notify_content, notify_options, setCookie, template;
+  
+      template = '<div data-notify="container" class="ui {0} message" role="alert">' + '<i data-notify="dismiss" class="close icon"></i>' + '<span data-notify="message">{2}</span>' + '</div>';
+      notify_content = null;
+      notify_options = {};
+      alertTip = '';
+      $error_box = $(".flash_error.flash_error_box");
+      if (notify_options.type === 'error' && $error_box.length > 0 && !$.isEmptyObject(notify_content.message)) {
+        if (notify_content.message === 'captcha_fail') {
+          alertTip = "The captcha is incorrect";
+        } else if (notify_content.message === 'not_found_in_database') {
+          alertTip = "Invalid email or password.";
+        } else if (notify_content.message === 'not_found_and_show_captcha') {
+          alertTip = "Invalid email or password.";
+        } else {
+          alertTip = notify_content.message;
+        }
+        $error_box.html(alertTip).show();
+      } else if (notify_content) {
+        notify_options.delay = 3000;
+        notify_options.template = template;
+        notify_options.offset = {
+          x: 10,
+          y: 30
+        };
+        notify_options.element = '#messages-container';
+        $.notify(notify_content, notify_options);
+      }
+      setCookie = function(name, value) {
+        $.cookie(name, value, {
+          path: '/',
+          expires: 365
+        });
+      };
+      return $('#remove-bulletin').on('click', function() {
+        setCookie('remove_bulletin', "gitee-maintain-1516115940");
+        $('#git-bulletin').hide();
+      });
+    });
+  
+  }).call(this);
+</script>
+
+<div class='git-project-header'>
+<div class='fixed-notice-messages'>
+<div class='ui info icon floating message green' id='fetch-ok' style='display: none'>
+<div class='content'>
+<div class='header status-title'>
+<i class='info icon status-icon'></i>
+代码拉取完成，系统将自动刷新
+</div>
+</div>
+</div>
+</div>
+<div class='ui container'>
+
+<div class='git-project-header-details'>
+<div class='git-project-header-actions'>
+<span class='ui basic buttons'>
+<a class='ui button donate' id='project-donate' title='Donate'>
+<i class='iconfont icon-donation'></i>
+Donate
+</a>
+<a class='ui button social-count' href='/ityouknow/spring-boot-examples#project-donate-overview'>1</a>
+<div class='ui small modal project-donate-modal' id='project-donate-modal'>
+<div class='content form-wrapper'>
+<div class='ui inverted dimmer'>
+<div class='ui loader'></div>
+</div>
+<h3 class='ui creator info header'>
+<img alt="343586_ityouknow" class="ui circular image" src="/uploads/86/343586_ityouknow.png?1510112511" />
+<div class='content'>
+<a href="/ityouknow" class="name" target="_blank">纯洁的微笑
+</a><p>
+<span class="translation_missing" title="translation missing: en.donate.project">Project</span>: spring-boot-examples
+</p>
+<div class='ui sub header'>
+(I have received 1 donations)
+</div>
+</div>
+</h3>
+<p class='donate-description'>
+如果您觉得项目内容有用，可以请作者吃个肉夹馍~ ^_^
+</p>
+<div class='ui form'>
+<div class='inline field'><label>
+Amount:
+</label><div class='card-fields nocheckbox'><div class='card-field'>
+<div class='ui radio checkbox'>
+<input checked="checked" id="ensure_cash_10" name="ensure_cash" type="radio" value="10" /><label>10 元</label>
+</div>
+</div>
+<div class='card-field'>
+<div class='ui radio checkbox'>
+<input id="ensure_cash_20" name="ensure_cash" type="radio" value="20" /><label>20 元</label>
+</div>
+</div>
+<div class='card-field'>
+<div class='ui radio checkbox'>
+<input id="ensure_cash_50" name="ensure_cash" type="radio" value="50" /><label>50 元</label>
+</div>
+</div>
+<div class='card-field'>
+<div class='ui radio checkbox'>
+<input id="ensure_cash_manual" name="ensure_cash" type="radio" value="manual" /><label>Other</label>
+</div>
+</div></div>
+</div>
+<div class='inline field' style='display: none'>
+<div class='ui labeled fluid input'>
+<div class='ui basic label'>Amount</div>
+<input id="manual_cash" max="50000" min="1" name="manual_cash" placeholder="&gt;1元" type="number" value="100" />
+</div>
+</div>
+<div class='inline field'><label>
+Donator:
+</label><div class='ui fluid input'><input id="name" name="name" placeholder="Donator name" required="required" type="text" value="" /></div>
+</div>
+<div class='inline textarea field'><label>
+Message:
+</label><textarea name='msg' placeholder='Say something to the author of the project' required rows='3'>Thank you for your open source project!</textarea>
+</div>
+<div class='inline pay method field'><label>
+Pay method:
+</label><div class='ui radio checkbox' title='Alipay'>
+<input id="pay_type_alipay" name="pay_type" type="radio" value="alipay" />
+<label>
+<div class='mayun-icon my-ic-alipay my-ic-alipay-dims'></div>
+</label>
+</div>
+<div class='ui radio checkbox' title='WeChat'>
+<input checked="checked" id="pay_type_wepay" name="pay_type" type="radio" value="wepay" />
+<label>
+<div class='mayun-icon my-ic-wepay my-ic-wepay-dims'></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='actions donate-actions'>
+<button class='ui orange large pay approve button'>
+&emsp;Donate&emsp;
+</button>
+&emsp;
+<a href="javascript:void(0)" class="cancel">Cancel</a>
+</div>
+</div>
+<div class='ui small modal wepay-qrcode'>
+<div class='header'>
+扫描微信二维码支付
+<span class='wepay-cash'></span>
+</div>
+<div class='content weqcode-center'>
+<img id='wepay-qrcode' src=''>
+</div>
+<div class='actions'>
+<div class='ui negative button'>取消</div>
+<div class='ui button positive right'>
+支付完成
+</div>
+</div>
+</div>
+</span>
+
+<span class='ui basic buttons watch-container'>
+<a href="/login" class="ui button watch" title="You must be signed in to watch a repository"><i class='iconfont icon-watch'></i>
+Watch
+</a><a href="/ityouknow/spring-boot-examples/watchers" class="ui button social-count" title="25">25
+</a></span>
+<span class='ui basic buttons star-container'>
+<a href="/login" class="ui button star" title="You must be signed in to star a repository"><i class='iconfont icon-star'></i>
+Star
+</a><a href="/ityouknow/spring-boot-examples/stargazers" class="ui button social-count" title="57">57
+</a></span>
+<span class='ui basic buttons fork-container'>
+<a href="/login" class="ui button fork "><i class='iconfont icon-fork'></i>
+Fork
+</a><a href="/ityouknow/spring-boot-examples/members" class="ui button social-count" title="24">24
+</a></span>
+</div>
+<h2 class='git-project-title'>
+<span class="project-title"><i class="iconfont icon-project-public" title="This is a public project"></i> <a href="/ityouknow" class="author" title="纯洁的微笑">纯洁的微笑</a> / <a href="/ityouknow/spring-boot-examples" class="repository" style="padding-bottom: 0px" target="" title="spring-boot-examples">spring-boot-examples</a></span><span class="project-badges"><a href="/explore/recommend?lang=Java" class="ui small label" id="project-language" target="_blank" title="主要编程语言">Java</a></span>
+
+<input id="project_title" name="project_title" type="hidden" value="纯洁的微笑/spring-boot-examples" />
+</h2>
+</div>
+</div>
+<div class='row' id='import-result-message' style='padding-top: 0px; display: none'>
+<div class='sixteen wide column'>
+<div class='ui icon yellow message status-color'>
+<i class='info icon status-icon' style='width:60px;padding-right:12px;'></i>
+<i class='close icon'></i>
+<div class='header status-title'>
+同步状态
+</div>
+<span class='status-message'></span>
+</div>
+</div>
+</div>
+<div class='ui small modal' id='modal-fork-project'>
+<div class='close-button'>
+<i class='icon-close iconfont'></i>
+</div>
+<div class='header left aligned'>
+Fork this project
+</div>
+<div class='content'>
+<div class='fork-info-content'>
+<div class='ui segment fork_project_loader'>
+<div class='ui active inverted dimmer'>
+<div class='ui text loader'>Loading</div>
+</div>
+</div>
+</div>
+</div>
+<div class='actions fork-action hide'>
+<a class='cancel'>&emsp;Cancel&emsp;</a>
+<div class='ui large button orange ok'>&emsp;Confirm&emsp;</div>
+</div>
+</div>
+<script>
+  (function() {
+    $('#modal-fork-project').modal({
+      transition: 'fade'
+    });
+  
+  }).call(this);
+</script>
+<style>
+  i.loading {
+    -webkit-animation: icon-loading 1.2s linear infinite;
+    animation: icon-loading 1.2s linear infinite;
+  }
+  .qrcode_cs{
+    float: left;
+  }
+</style>
+
+<div class='git-project-nav'>
+<div class='ui container'>
+<div class='ui secondary pointing menu'>
+<a href="/ityouknow/spring-boot-examples" class="item active"><i class='iconfont icon-code'></i>
+Code
+</a><a href="/ityouknow/spring-boot-examples/issues" class="item "><i class='iconfont icon-issue'></i>
+Issues
+<span class='ui mini circular label'>
+0
+</span>
+</a><a href="/ityouknow/spring-boot-examples/pulls" class="item "><i class='iconfont icon-pull-request'></i>
+Pull Requests
+<span class='ui mini circular label'>
+0
+</span>
+</a><a href="/ityouknow/spring-boot-examples/attach_files" class="item "><i class='iconfont icon-annex'></i>
+Attachments
+<span class='ui mini circular label'>0</span>
+</a><a href="/ityouknow/spring-boot-examples/wikis" class="item "><i class='iconfont icon-wiki'></i>
+Wiki
+<span class='ui mini circular label'>
+0
+</span>
+</a><a href="/ityouknow/spring-boot-examples/repository/stats/master" class="item  "><i class='iconfont icon-statistics'></i>
+Statistics
+</a><div class='item'>
+<div class='ui dropdown git-project-service'>
+<div class='text'>
+<i class='iconfont icon-service'></i>
+Service
+</div>
+<i class='dropdown icon'></i>
+<div class='menu'>
+<a href="/ityouknow/spring-boot-examples/paas/select_platform" class="item">PaaS
+</a><a href="/ityouknow/spring-boot-examples/quality_analyses/confirm_platform" class="item">Analysis
+</a><a href="/ityouknow/spring-boot-examples/pages" class="item">Pages
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  $('.git-project-nav .ui.dropdown').dropdown({ action: 'nothing' });
+</script>
+<style>
+  .git-project-nav i.checkmark.icon {
+    color: green;
+  }
+</style>
+<script>
+  $('#git-versions.dropdown').dropdown();
+  $.ajax({
+    url:"/ityouknow/spring-boot-examples/access/add_access_log",
+    type:"GET"
+  });
+</script>
+
+</div>
+<div class='git-project-content-wrapper'>
+<div class='ui container'>
+<div class='git-project-content' id='git-project-content'>
+<div class='row' id='git-detail-clone'>
+<div class='git-project-desc-wrapper'>
+<div class='git-project-desc'>
+<span class='git-project-desc-text'>
+Spring Boot各种实战案例
+</span>
+<span class='git-project-homepage'>
+<a href="http://www.ityouknow.com/" id="homepage" rel="nofollow" target="_blank">http://www.ityouknow.com/</a>
+</span>
+</div>
+<div class='git-project-desc-edit ui form'>
+<div class='fields'>
+<div class='eight wide field'>
+<div class='ui small input'>
+<input name='project[description]' placeholder='Description' type='text' value='Spring Boot各种实战案例'>
+</div>
+</div>
+<div class='four wide field'>
+<div class='ui small input'>
+<input name='project[homepage]' placeholder='Project Site(eg: https://gitee.com)' type='text' value='http://www.ityouknow.com/'>
+</div>
+</div>
+<button class='ui positive button btn-save'>
+Save
+</button>
+<button class='ui button btn-cancel-edit'>
+Cancel
+</button>
+</div>
+</div>
+<script>
+  $(function () {
+    new ProjectInfoEditor({
+      el: '.git-project-desc-wrapper',
+      homepage: "http://www.ityouknow.com/",
+      description: "Spring Boot\u5404\u79cd\u5b9e\u6218\u6848\u4f8b",
+      url: "/ityouknow/spring-boot-examples/update_description",
+      modalHelper: window.Gitee.modalHelper
+    })
+  })
+</script>
+</div>
+
+</div>
+<div class='ui horizontal hollow nopadding segments git-project-stats'>
+<div class='ui segment center aligned'>
+<a href="/ityouknow/spring-boot-examples/commits/master"><i class='iconfont icon-commit'></i>
+<b id='commits_count'>77</b>
+commits
+</a></div>
+<div class='ui segment center aligned'>
+<a href="/ityouknow/spring-boot-examples/branches"><i class='iconfont icon-branches'></i>
+<b id='branches_count'>1</b>
+branches
+</a></div>
+<div class='ui segment center aligned'>
+<a href="/ityouknow/spring-boot-examples/tags"><i class='iconfont icon-tag'></i>
+<b id='tags_count'>0</b>
+tags
+</a></div>
+<div class='ui segment center aligned'>
+<a href="/ityouknow/spring-boot-examples/releases"><i class='iconfont icon-release'></i>
+<b id='releases_count'>0</b>
+releases
+</a></div>
+<div class='ui segment center aligned'>
+<a href="/ityouknow/spring-boot-examples/contributors?ref=master"><i class='iconfont icon-collaborators'></i>
+<b id='collaborators_count'></b>
+<span class='contributor_text'>
+Fetching contributors
+</span>
+</a></div>
+</div>
+<div class='git-project-bread' id='git-project-bread'>
+<div class='ui right floated horizontal list'>
+<div class='item'>
+<div class='ui orange button' id='btn-dl-or-clone'>
+Clone or download
+<i class='dropdown icon'></i>
+</div>
+</div>
+</div>
+<div class='ui horizontal list'>
+<div class='item item git-project-branch-item'>
+<input id="path" name="path" type="hidden" value="spring-boot-web/src/main/resources/static/images/favicon.png" />
+<div class='ui top left pointing dropdown gradient button dropdown-has-tabs' id='git-project-branch'>
+<input id="ref" name="ref" type="hidden" value="master" />
+<div class='default text'>
+master
+</div>
+<i class='dropdown icon'></i>
+<div class='menu'>
+<div class='ui left icon search input'>
+<i class='iconfont icon-search'></i>
+<input placeholder='Search branch' type='text'>
+</div>
+<div class='tab-menu'>
+<div class='tab-menu-action' data-tab='branches'>
+<a href="/ityouknow/spring-boot-examples/branches/recent" class="ui small basic blue button">Manage</a>
+</div>
+<div class='tab-menu-action' data-tab='tags'>
+<a href="/ityouknow/spring-boot-examples/tags" class="ui small basic blue button">Manage</a>
+</div>
+<div class='tab-menu-item' data-placeholder='Search branches' data-tab='branches'>
+Branches (1)
+</div>
+</div>
+<div class='tab scrolling menu' data-tab='branches'>
+<div class='item' data-value='master'>master</div>
+</div>
+</div>
+</div>
+</div>
+<div class='item'>
+<div class='repo-index repo-none-index' style='margin-left:0px;'>
+<div class='ui horizontal list repo-action-list'>
+<div class='item'>
+<div class='ui pointing right top dropdown gradient button' id='git-project-file'>
+<div class='text'>File</div>
+<i class='dropdown icon'></i>
+<div class='menu'>
+<div class='disabled item'>New file</div>
+<div class='disabled item'>Upload file</div>
+<a class='item repo-action' id='search-files'>
+Search
+</a>
+</div>
+</div>
+</div>
+<div class='item'>
+<a href="/ityouknow/spring-boot-examples/widget" class="ui gradient button repo-action">Widget
+</a></div>
+</div>
+</div>
+</div>
+<div class='breadcrumb_path item' style='margin-left: 0; padding-left: 0'>
+<div class='ui breadcrumb path' id='path-breadcrumb'>
+<a href="/ityouknow/spring-boot-examples/tree/master" class="section repo-name" data-direction="back" style="font-weight: bold">spring-boot-examples
+</a><div class='divider'>
+/
+</div>
+<strong>
+<a href="/ityouknow/spring-boot-examples/tree/master/spring-boot-web" class="section" data-direction="back"><span class='cblue'>
+spring-boot-web
+</span>
+</a></strong>
+<div class='divider'>
+/
+</div>
+<strong>
+<a href="/ityouknow/spring-boot-examples/tree/master/spring-boot-web/src" class="section" data-direction="back"><span class='cblue'>
+src
+</span>
+</a></strong>
+<div class='divider'>
+/
+</div>
+<strong>
+<a href="/ityouknow/spring-boot-examples/tree/master/spring-boot-web/src/main" class="section" data-direction="back"><span class='cblue'>
+main
+</span>
+</a></strong>
+<div class='divider'>
+/
+</div>
+<strong>
+<a href="/ityouknow/spring-boot-examples/tree/master/spring-boot-web/src/main/resources" class="section" data-direction="back"><span class='cblue'>
+resources
+</span>
+</a></strong>
+<div class='divider'>
+/
+</div>
+<strong>
+<a href="/ityouknow/spring-boot-examples/tree/master/spring-boot-web/src/main/resources/static" class="section" data-direction="back"><span class='cblue'>
+static
+</span>
+</a></strong>
+<div class='divider'>
+/
+</div>
+<strong>
+<a href="/ityouknow/spring-boot-examples/tree/master/spring-boot-web/src/main/resources/static/images" class="section" data-direction="back"><span class='cblue'>
+images
+</span>
+</a></strong>
+<div class='divider'>
+/
+</div>
+<strong>
+favicon.png
+</strong>
+</div>
+
+</div>
+</div>
+<div class='ui popup bottom right transition hidden git-project-download-panel'>
+<div class='ui small secondary pointing menu'>
+<a class='item active' data-type='http' data-url='https://gitee.com/ityouknow/spring-boot-examples.git'>HTTPS</a>
+<a class='item' data-type='ssh' data-url='git@gitee.com:ityouknow/spring-boot-examples.git'>SSH</a>
+</div>
+<div class='ui fluid right labeled small input'>
+<input id="project_clone_url" name="project_clone_url" onclick="focus();select()" readonly="readonly" type="text" value="https://gitee.com/ityouknow/spring-boot-examples.git" />
+<div class='ui basic label'>
+<div class='ui small basic orange button' data-clipboard-target='#project_clone_url' id='btn-copy-clone-url'>
+Copy
+</div>
+</div>
+</div>
+<hr>
+<a href="/login?url_to=/ityouknow/spring-boot-examples/repository/archive/master.zip" class="ui fluid download link button" data-confirm="You must be signed in to download"><i class='icon download'></i>
+Download ZIP
+</a><hr>
+<a href='/enterprises?from=gea-dl-A'>
+<div class='dl ent-poster'>
+<div class='carousel slide' data-interval='5000' data-ride='carousel'>
+<div class='carousel-inner'>
+<div class='item img-1 active'>
+<img src='/index/ent_poster/banner_5_1_a.png'>
+</div>
+<div class='item img-2'>
+<img src='/index/ent_poster/banner_5_2_a.png'>
+</div>
+<div class='item img-3'>
+<img src='/index/ent_poster/banner_5_3_a.png'>
+</div>
+</div>
+</div>
+</div>
+</a>
+
+</div>
+</div>
+<style>
+  .ui.dropdown .menu>.header{text-transform:none}
+</style>
+<script>
+  $(document).ready(function () {
+    var $contri_count = $('#collaborators_count')
+    var $contri_text = $('.contributor_text')
+    $.ajax({
+      url: '/ityouknow/spring-boot-examples/contributors_count?ref=master',
+      method: 'GET',
+      success: function(data) {
+        if (data.status === 1) {
+          $contri_count.text(data.contributors_count);
+          $contri_text.text('contributors')
+        } else {
+          $contri_text.text('Fetching failed')
+        }
+      }
+    });
+    var $tip = $('#apk-download-tip');
+    if (!$tip.length) {
+      return;
+    }
+    $tip.find('.btn-close').on('click', function () {
+      $tip.slideUp();
+    });
+  });
+  Gitee.initTabsInDropdown($('#git-project-branch').dropdown({
+    fullTextSearch: true,
+    onChange: function (value, text) {
+      var path = $('#path').val();
+      var href = ['/ityouknow/spring-boot-examples/tree', value, path].join('/');
+      window.location.href = href;
+    }
+  }));
+  $('#git-project-file').dropdown({ action: 'hide' });
+  (function(){
+    function pathAutoRender() {
+      var $parent = $('#git-project-bread'),
+          $child = $('#git-project-bread').children('.ui.horizontal.list'),
+          mainWidth = 0;
+      $child.each(function (i,item) {
+        mainWidth += $(item).width()
+        });
+      $('.breadcrumb.path.fork-path').remove();
+      if (mainWidth > 995) {
+        $('#path-breadcrumb').hide();
+        $parent.append('<div class="ui breadcrumb path fork-path">' + $('#path-breadcrumb').html() + '<div/>')
+      } else {
+        $('#path-breadcrumb').show();
+      }
+    }
+    window.pathAutoRender = pathAutoRender;
+    pathAutoRender();
+  })();
+</script>
+<script>
+  (function() {
+    var $btnCopy, $input, $item, $panel, clipboard, remoteWay;
+  
+    $input = $('#project_clone_url');
+  
+    remoteWay = 'http';
+  
+    clipboard = new Clipboard('#btn-copy-clone-url');
+  
+    $panel = $('.git-project-download-panel');
+  
+    $btnCopy = $('#btn-copy-clone-url');
+  
+    $panel.find('.menu > .item').on('click', function() {
+      var $item;
+  
+      $item = $(this).addClass('active');
+      $item.siblings().removeClass('active');
+      $input.val($item.attr('data-url'));
+      return setCookie('remote_way', $item.attr('data-type'), 360);
+    });
+  
+    $('#btn-dl-or-clone').popup({
+      popup: $panel,
+      position: 'bottom right',
+      on: 'click'
+    });
+  
+    if (remoteWay) {
+      $item = $panel.find('.item[data-type="' + remoteWay + '"]');
+      if ($item.length === 0) {
+        $item = $panel.find('.item[data-type="http"]');
+      }
+      $item.addClass('active').siblings().removeClass('active');
+      $input.val($item.attr('data-url'));
+    }
+  
+    clipboard.on('success', function() {
+      $btnCopy.popup({
+        content: 'Copied',
+        position: 'right center',
+        onHidden: function() {
+          return $btnCopy.popup('destroy');
+        }
+      });
+      return $btnCopy.popup('show');
+    });
+  
+    clipboard.on('error', function() {
+      $btnCopy.popup({
+        content: 'Copy failed. Please copy it manually',
+        position: 'right center',
+        onHidden: function() {
+          return $btnCopy.popup('destroy');
+        }
+      });
+      return $btnCopy.popup('show');
+    });
+  
+  }).call(this);
+</script>
+
+<div class='row column tree-holder' id='tree-holder'>
+<div class='tree-content-holder' id='tree-content-holder'>
+<div class='file_holder'>
+<div class='file_title'>
+<div class='options'><div class='ui mini buttons basic'>
+<a href="/ityouknow/spring-boot-examples/raw/master/spring-boot-web/src/main/resources/static/images/favicon.png" class="ui button edit-raw">Raw</a>
+<a href="/ityouknow/spring-boot-examples/commits/master/spring-boot-web/src/main/resources/static/images/favicon.png" class="ui button edit-history">History</a>
+</div>
+<script>
+  try {
+    if((gon.wait_fork!=undefined && gon.wait_fork==true) || (gon.wait_fetch!=undefined && gon.wait_fetch==true)){
+      $('.edit-blob').popup({content:"This project is doing something background, pleace try again later", on: 'hover', delay: { show: 200, hide: 200 }});
+      $('.edit-blob').click(function(e){
+        e.preventDefault();
+      })
+    }
+  
+    setUrl = function(){
+      var params = window.location.search
+      if (params==undefined || $.trim(params).length==0) return;
+      $('span.options').children('.basic').find('a').each(function(index,ele){
+        var origin_href = $(ele).attr('href');
+        if (origin_href!="#" && origin_href.indexOf('?') == -1){
+          $(ele).attr('href',origin_href+params);
+        }
+      });
+    }
+  
+    setUrl();
+  
+  
+    var $btncopy = $("#copy-text");
+    $(document).ready(function() {
+      $btncopy.popup({
+        content: isCopied ? 'Copied':'Copy to clipboard'
+      })
+    })
+    var isCopied = false;
+    $btncopy.on('click', function() {
+      try {
+        var clipboard = new Clipboard("#copy-text", {
+          text: function(trigger) {
+            return $("#blob_raw").val();
+          }
+        });
+        var success = document.execCommand('copy');
+        if (success) {
+          $btncopy.trigger('copied', ['Copied']);
+          isCopied = true;
+        } else {
+          alert("Copy failed. Please copy it manually")
+        }
+      } catch (err) {
+        $btncopy.trigger('copied', ['Copy to clipboard']);
+      }
+    });
+  
+    $btncopy.bind('copied', function(event, message) {
+      $(this).popup('hide');
+      $(this).popup('destroy');
+      isCopied = true;
+      $(this).popup({content: isCopied ? 'Copied':'Copy to clipboard'})
+      $(this).popup('show');
+    });
+  } catch (error) {
+    console.log('blob/action error:' + error);
+  }
+</script>
+</div>
+<div class='blob-description'>
+<i class='iconfont icon-readme'></i>
+<span class='file_name'>
+favicon.png
+<small>1.52 KB</small>
+</span>
+→
+<span class='recent-commit' style='margin-top: 0.7rem'>
+<a href="/ityouknow" class="commit-author-link"><img alt="" class="mini avatar circular ui image " src="/uploads/86/343586_ityouknow.png?1510112511" /> <span class="commit-author-name">ityouknow</span></a>
+<span>authored</span>
+<span class='timeago commit-date' title='2016-11-21 20:07:10 +0800'>
+2016-11-21 20:07
+</span>
+.
+<a href="/ityouknow/spring-boot-examples/commit/dbea8ebad5dca02ef9c2cfd7430a576698fbbece" title="重新整理结构">重新整理结构</a>
+</span>
+
+</div>
+</div>
+<div class='clearfix'></div>
+<div class='file_content image_file'>
+<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0&#x000A;d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2JpVFh0WE1MOmNvbS5hZG9i&#x000A;ZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2Vo&#x000A;aUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6&#x000A;bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2&#x000A;LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpS&#x000A;REYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJk&#x000A;Zi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIg&#x000A;eG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8i&#x000A;IHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5&#x000A;cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5j&#x000A;b20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0idXVpZDpF&#x000A;RTE2MTIxNzQ3RUVERTExQkM5RkE3MDBBNkY0RDhDMSIgeG1wTU06RG9jdW1l&#x000A;bnRJRD0ieG1wLmRpZDpGMUMxRDM5QjBGNzAxMUUzODE3RkU5MEMxMzBDODE2&#x000A;MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMUMxRDM5QTBGNzAxMUUz&#x000A;ODE3RkU5MEMxMzBDODE2MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90&#x000A;b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0&#x000A;UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MkRDNDcwNzY0NDIwNjgxMTgyMkFF&#x000A;RkMyQjhBOEY0MEIiIHN0UmVmOmRvY3VtZW50SUQ9InV1aWQ6RUUxNjEyMTc0&#x000A;N0VFREUxMUJDOUZBNzAwQTZGNEQ4QzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+&#x000A;IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4S&#x000A;MlYtAAACRUlEQVR42oyTXUiTYRTH/+9a9jGTZvMjZZuVzhGrnEmNGmkZVFBE&#x000A;SFdhgpYX4VUlUSnRVRfSRVIXQkJB1EWRUFBUOC1mRSNyi+xDg2hbCzc/2ObX&#x000A;yK3/8/a+gZXmgR/PeT7+D+c55zlSzfUy/GFrSS3ZRQpIggyQDnKFxMhe8oIM&#x000A;aYTi2mGPGLSkhbwlJ4iNpJNMsolcIF6yjlwkx4ROUiKQyG1Shf/bhC4tY8lY&#x000A;Ihqkb9Ioi2fmKYYQH995CQs02nxOneICE2mejzg3w4ymPe1YY7DBlucQS5Xi&#x000A;3TVk0VzC/OWrsa1wPyqtB6HVLJTXNpoq4A24nVolozPMqC+C3ViO4pwSmPQW&#x000A;LFusn7GfSiVRmLVeuFZxwSp1Y4VuJeqd5ym0zxpNOP4NBl0uDOl5YmrQKKWS&#x000A;rXbL2TnFE4k4fMEeSJJGfUpSXBBQDxTnlM4qHhoL4fLTUyg1VvyKJCaqiC/i&#x000A;gpfqocFY4C/hdPIHXB/voPn+IWy3VEG/NEtef+3vEoNL5OAqqRazjt42HNl6&#x000A;Tg5xMOpHb8CN7v67GB2P8HlNKDPvkMWxyRE8fHdDuLfUn3iP7CvK3sC3peH9&#x000A;d8/vCES2qzc3wpxpleeReAit3SfxdfjTB9E3WuVcnSXb/ur07rYCib+65UkD&#x000A;opPDOFBSL+dlfCqGN/5n8AbdeP75ARLTU0lqGtgLKa3STOGBsK+ObqdcZyTh&#x000A;H+lHa1fjv/I5So5S06l2oBqqi4PjUd9NR1/II2pZrnxzkegI8ZHHpJ3iiKr7&#x000A;KcAAO/GrgtdfsmsAAAAASUVORK5CYII='>
+</div>
+
+</div>
+</div>
+<div class='tree_progress'></div>
+<div class='ui small modal' id='modal-linejump'>
+<div class='ui custom form content'>
+<div class='field'>
+<div class='ui right action input'>
+<input placeholder='Jump to line...' type='number'>
+<div class='ui orange button'>
+Go
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row column inner-comment' id='blob-comment'>
+<input id="comment_path" name="comment_path" type="hidden" value="spring-boot-web/src/main/resources/static/images/favicon.png" />
+<input id="reply_comment_id" name="reply_comment_id" type="hidden" />
+<div class='git-project-comments'>
+<h3 id='project_comm_title'>
+<i class='iconfont icon-comment'></i>
+Comment
+(
+<span class='comments-count'>
+0
+</span>
+)
+</h3>
+<div class='ui threaded comments middle aligned' id='notes-list'></div>
+<input id="ajax_add_note_id" name="ajax_add_note_id" type="hidden" />
+<div class='text-center'>
+<div class='tip-loading' style='display: none'>
+<div class='ui active mini inline loader'></div>
+Loading...
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    var $btnLoad, $comments, $container, $tipLoading, checkLoad, commentsCount, err, loadComments, page, path;
+  
+    page = 0;
+  
+    commentsCount = 0;
+  
+    $container = $('.git-project-comments');
+  
+    $comments = $container.find('.ui.comments');
+  
+    $tipLoading = $container.find('.tip-loading');
+  
+    $btnLoad = $container.find('.btn-load-more');
+  
+    if (commentsCount < 1) {
+      return;
+    }
+  
+    if ($('#comment_path').val() === '') {
+      path = '/';
+    } else {
+      path = $('#comment_path').val();
+    }
+  
+    loadComments = function() {
+      $btnLoad.hide();
+      $tipLoading.show();
+      return $.ajax({
+        url: '/ityouknow/spring-boot-examples/comment_list',
+        data: {
+          page: page,
+          path: path
+        },
+        success: function(data) {
+          var err, htmls;
+  
+          try {
+            $tipLoading.hide();
+            $btnLoad.show();
+            if (data.status !== 0) {
+              $btnLoad.text('No more comments');
+              return $btnLoad.prop('disabled', true).addClass('disabled');
+            } else {
+              htmls = data.html.replace(/[\r\n]/g, "");
+              $(htmls).each(function(key, html) {
+                var depth, note_ids, parentId;
+  
+                html = $(html).prop("outerHTML");
+                if (data.comments_count < 10) {
+                  note_ids = $('#ajax_add_note_id').val().split(',');
+                  note_ids.forEach(function(val, index) {
+                    if (val === $(html).attr('data-note-id')) {
+                      return $('#note_' + val).closest('.children-comments').remove();
+                    }
+                  });
+                }
+                parentId = $(html).attr('data-parent-id');
+                depth = $(html).attr('data-depth');
+                if (parentId != null) {
+                  return $('#note_' + parentId).append("                <div class='children-comments comments' data-deepth='" + depth + "'>                  <a class='toggle toggle-btn comment-show-toggle' href='javascript:void(0)'>                    <i class='iconfont icon-minus-circle'></i></a>" + html + "                    <div class='ui message-text hidden'></div>                  </div>                ");
+                } else {
+                  return $comments.append("<div class='comments'>" + html + "</div>");
+                }
+              });
+              page += 1;
+              if (data.comments_count < 10) {
+                $('#ajax_add_note_id').val('');
+                $btnLoad.text('No more comments');
+                $btnLoad.prop('disabled', true).addClass('disabled');
+              }
+              $comments.find('.timeago').timeago();
+              $comments.find('.commenter-role-label').popup();
+              noteAnchorLocater.setup();
+              return toMathMlCode('', 'comments');
+            }
+          } catch (_error) {
+            err = _error;
+            return console.log('loadComments error:' + err);
+          }
+        }
+      });
+    };
+  
+    checkLoad = function() {
+      var listTop, top;
+  
+      top = $(window).scrollTop();
+      listTop = $container.offset().top;
+      if (listTop >= top && listTop < top + $(window).height()) {
+        $(window).off('scroll', checkLoad);
+        return loadComments();
+      }
+    };
+  
+    $btnLoad.on('click', loadComments);
+  
+    loadComments();
+  
+    try {
+      this.noteAnchorLocater.init({
+        lastAnchorElm: '#project_comm_title'
+      });
+    } catch (_error) {
+      err = _error;
+      console.log('noteAnchorLocater err:' + err);
+    }
+  
+  }).call(this);
+</script>
+
+</div>
+<div class='inner-comment-box' id='comment-box'>
+<p>
+You need to <a href="/login">Sign in</a> for post a comment
+</p>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    $(function() {
+      Tree.init();
+      return ProjectComment.init();
+    });
+  
+  }).call(this);
+</script>
+
+<script>
+  (function() {
+    var donateModal;
+  
+    window.Gitee.modalHelper = new GiteeModalHelper({
+      alertText: '提示',
+      okText: '确定'
+    });
+  
+    donateModal = new ProjectDonateModal({
+      el: '#project-donate-modal',
+      alipayUrl: '/ityouknow/spring-boot-examples/alipay',
+      wepayUrl: '/ityouknow/spring-boot-examples/wepay',
+      modalHelper: window.Gitee.modalHelper
+    });
+  
+    if ("" === 'true') {
+      donateModal.show();
+    }
+  
+    $('#project-donate').on('click', function() {
+      return donateModal.show();
+    });
+  
+    $('#send-message-to-author').on('click', function() {
+      donateModal.hide();
+      return $('#project-user-message').trigger('click');
+    });
+  
+  }).call(this);
+</script>
+<script>
+  Tree.initHighlightTheme('white')
+</script>
+
+<script>
+  $(function() {
+    GitLab.GfmAutoComplete.dataSource = "/ityouknow/spring-boot-examples/autocomplete_sources"
+    GitLab.GfmAutoComplete.Emoji.assetBase = 'https://assets.gitee.com/assets/emoji'
+    GitLab.GfmAutoComplete.setup();
+  });
+</script>
+
+<footer id='git-footer-main'>
+<div class='ui container'>
+<div class='ui two column grid'>
+<div class='column'>
+<p><a href="https://gitee.com/" target="_blank">© Gitee.com  </a></p>
+<div class='ui three column grid' id='footer-left'>
+<div class='column'>
+<div class='ui link list'>
+<div class='item'>
+<a href="/terms" class="item">Terms</a>
+</div>
+<div class='item'>
+<a href="http://git.mydoc.io" class="item">Tutorial</a>
+</div>
+<div class='item'>
+<a href="/api/v5/swagger" class="item">OpenAPI</a>
+</div>
+</div>
+</div>
+<div class='column'>
+<div class='ui link list'>
+<div class='item'>
+<a href="https://gitee.com/gitee-stars/" class="item">Gitee Stars</a>
+</div>
+<div class='item'>
+<a href="/appclient" class="item">App and Plugins</a>
+</div>
+<div class='item'>
+<a href="/links.html" class="item">Partners</a>
+</div>
+</div>
+</div>
+<div class='column'>
+<div class='ui link list'>
+<div class='item'>
+<a href="https://gitee.com/git-osc/" class="item">CHANGELOG</a>
+</div>
+<div class='item'>
+<a href="/oschina/git-osc/issues" class="item">Suggestions</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='column right aligned followus'>
+<div class='qrcode weixin'>
+<p class='weixin-text'>WeChat</p>
+<img alt="Qrcode-weixin" src="https://assets.gitee.com/assets/qrcode-weixin-8ab7378f5545710bdb3ad5c9d17fedfe.jpg" />
+</div>
+<div class='phone-and-qq column'>
+<div class='ui list'>
+<div class='item'>
+400-898-2008 Call 2
+</div>
+<div class='item' id='git-footer-email'>
+git#oschina.cn
+</div>
+<div class='item qq-and-weibo'>
+<a href="//shang.qq.com/wpa/qunwpa?idkey=0d6c2fc0b5b71ac33405dd575bb490bf1a50e3c9a9f694e8a689cb59ee7dacc3" class="icon-popup" title="点击加入码云官方三群"><i class='iconfont icon-logo-qq'></i>
+<span>三群：655903986</span>
+</a><a href="http://weibo.com/mayunOSC" class="icon-popup" target="_blank" title="关注码云微博"><i class='iconfont icon-logo-weibo'></i>
+<span>码云Gitee</span>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='bottombar'>
+<div class='ui container'>
+<div class='ui grid'>
+<div class='five wide column partner'>
+Bandwidth provided by <a href="https://www.anchnet.com/" target="_blank" title="anchnet"><img alt="51idc" src="/51idc.png" /></a>
+</div>
+<div class='eleven wide column right aligned'>
+<div class='copyright'>
+<a href="http://www.miitbeian.gov.cn/">粤ICP备12009483号-8</a>
+深圳市奥思网络科技有限公司版权所有
+</div>
+<i class='icon world'></i>
+<a href="/language/zh-CN">简 体
+</a>/
+<a href="/language/zh-TW">繁 體
+</a>/
+<a href="/language/en">English
+</a></div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+  function force_mobile() {
+    current_url = window.location.href;
+    force_mobile_url = current_url.substr(0,current_url.indexOf('?'))+'?force_mobile=true';
+    location.href = force_mobile_url;
+  }
+  (function () {
+    // 更新底栏的位置，当页面内容高度小于窗口高度时，会将底栏浮动定位在窗口底端
+    function updateFooterPosition() {
+      var pageHeight = document.body.offsetHeight;
+      if ($footer.hasClass('fixed-bottom')) {
+        pageHeight += $footer.outerHeight();
+        if (pageHeight > $(window).height()) {
+          $footer.removeClass('fixed-bottom');
+        }
+      } else {
+        if (pageHeight < $(window).height()) {
+          $footer.addClass('fixed-bottom');
+        }
+      }
+    }
+    var $footer = $('#git-footer-main');
+    $(document).on('ready', updateFooterPosition);
+    $(window).on({
+      'scroll': updateFooterPosition,
+      'resize': updateFooterPosition
+    });
+    // 每隔一段时间检测页面高度变化，确保底栏能在页面最底端
+    setInterval(updateFooterPosition, 500);
+    var email = $('#git-footer-email').text();
+    $('#git-footer-email').text(email.replace('#', '@'));
+  })();
+  $('.icon-popup').popup({ position: 'bottom center' });
+</script>
+<div class='side-toolbar'>
+<div class='button share-link'>
+<i class='iconfont icon-share'></i>
+</div>
+<div class='ui popup'>
+<div class='header'>
+Share to
+</div>
+<div class='bdsharebuttonbox'>
+<a class='item bds_weixin' data-cmd='weixin' title='分享到微信'>weixin</a>
+<a class='item bds_tsina' data-cmd='tsina' title='分享到新浪微博'>sina</a>
+<a class='item bds_sqq' data-cmd='sqq' title='分享到QQ好友'>qq</a>
+<a class='item bds_qzone' data-cmd='qzone' title='分享到QQ空间'>qzone</a>
+</div>
+</div>
+<div class='popup button' data-content='Comment' id='home-comment'>
+<i class='iconfont icon-comment'></i>
+</div>
+<div class='button gotop popup' data-content='Back to top' id='gotop'>
+<i class='iconfont icon-top'></i>
+</div>
+</div>
+<script>
+  (function() {
+    var $gotop, $root, $toolbar, update;
+  
+    $root = $('body, html');
+  
+    $toolbar = $('.side-toolbar');
+  
+    $gotop = $('#gotop').popup({
+      position: 'left center'
+    }).on('click', function() {
+      return $root.animate({
+        scrollTop: 0
+      }, 500);
+    });
+  
+    update = function() {
+      if ($(window).scrollTop() > 50) {
+        return $gotop.addClass('active');
+      } else {
+        return $gotop.removeClass('active');
+      }
+    };
+  
+    $(window).on('scroll', update);
+  
+    update();
+  
+    $toolbar.find('.share-link').popup({
+      inline: true,
+      hoverable: true,
+      position: 'left center',
+      delay: {
+        hide: 500
+      }
+    });
+  
+  }).call(this);
+</script>
+<script>
+  (function() {
+    var $comment, $root;
+  
+    $root = $('body, html');
+  
+    $comment = $('#home-comment').popup({
+      position: 'left center'
+    });
+  
+    $comment.on('click', function() {
+      var comment, href, offsetTop;
+  
+      if ($('#project_comm_title').length === 0) {
+        href = '/ityouknow/spring-boot-examples#project_comm_title';
+        window.location.href = href;
+        return;
+      }
+      comment = $('.comment.note')[0];
+      if (comment) {
+        offsetTop = $(comment).offset().top - 80;
+        return $root.animate({
+          scrollTop: offsetTop
+        }, 400);
+      } else {
+        offsetTop = $('#editor_comment').offset().top + 30;
+        $root.animate({
+          scrollTop: offsetTop
+        }, 400);
+        return $('#editor_comment').focus();
+      }
+    });
+  
+  }).call(this);
+</script>
+<script>
+  window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"分享到新浪微博","bdMini":"1","bdMiniList":["bdxc","tqf","douban","bdhome","sqq","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};
+</script>
+<script src="/bd_share/static/api/js/share.js" type="text/javascript"></script>
+
+
+
+<script>
+  (function() {
+    this.__gac = {
+      domain: 'www.oschina.net'
+    };
+  
+  }).call(this);
+</script>
+<script defer src='//www.oschina.net/public/javascripts/cjl/ga.js?t=20160926' type='text/javascript'></script>
+
+</body>
+</html>

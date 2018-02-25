@@ -1,7 +1,9 @@
 package com.spring.web.util;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class WebProperties {
     @Value("${com.neo.title}")
     private String title;
